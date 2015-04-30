@@ -5,6 +5,12 @@ Google / Github authentication proxy
 
 This docker container runs the [doorman-proxy](https://github.com/movableink/doorman) nodejs package as a supervisord process
 
+## Features
+
+- proxy runs as a supervisord process inside the container, so it's restarted automatically if the nginx server dies.
+- proxy configuration fully overridable through environment variables, example `.env.example` file provided.
+- secure web apps such as kibana, jenkins, phpmyadmin, dashboards without having to set up authentication in each of those apps.
+
 ## Configuration
 
 This [configuration file](conf/doorman/conf.js) will be added to the image on build time. See the file for available 
