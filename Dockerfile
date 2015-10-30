@@ -23,10 +23,6 @@ RUN apt-get update && apt-get upgrade -y && \
 RUN apt-get -y --no-install-recommends install git  && \
     git clone --single-branch --branch master https://github.com/movableink/doorman.git && \
     cd /doorman && \
-    #Update packages to the latest version, because doorman right now is broken because of an outdated package}
-    # https://github.com/movableink/doorman/issues/32
-    npm install -g npm-check-updates && \
-    npm-check-updates -u && \
     npm install
 
 #
