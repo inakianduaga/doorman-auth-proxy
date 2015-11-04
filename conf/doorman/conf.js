@@ -6,8 +6,8 @@
 // ==================
 
 var conf = {
-  // port to listen on - Keep this fixed
-  port: 8085,
+  // port to listen on, defaults to Doorman usual port
+  port: process.env.DOORMAN_PORT || 8085,
 
   // Secure port for HTTPS connections. SSL certificate options MUST be set when enabled.
   securePort: process.env.DOORMAN_SECURE_PORT,
