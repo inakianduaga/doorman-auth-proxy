@@ -2,13 +2,8 @@
 # Nodejs + npm base install
 # https://registry.hub.docker.com/_/node/
 #
-FROM node:0.10.38
+FROM node:4
 MAINTAINER Inaki Anduaga <inaki@inakianduaga.com>
-
-#
-# Update npm to the latest version
-#
-RUN npm install npm -g
 
 #
 # Install supervisor
